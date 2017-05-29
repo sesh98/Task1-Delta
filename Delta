@@ -11,14 +11,20 @@
 		font-family: cursive;
 		font-size: 200%;
 	}
+	#save{
+		background-color:red;
+		color:black;
+		margin-left: 45%;
+		font-size: 16px;
+		padding: 16px 32px;
+	}
 </style>
 <body style="background-color:pink">
 <h1 style="font-family: verdana;border:outset;color: black;background-color: red;text-align: center;">Notes</h1>
-<textarea  rows="10" cols="70" id="Sesh">
-	      						Type your text here...
+<textarea  rows="10" cols="70" id="Sesh" style="text-align: center;">Type your text here...
 </textarea> 
 <br><br><br>
-<button onclick="Save()" id="save" style="color:red;margin-left: 50%; ">Save</button>
+<button onclick="Save()" id="save" >Save</button>
 <script>
 	
 	function Save() {
@@ -26,7 +32,7 @@
 			window.alert("Your Document has been updated!");
 		else
 			window.alert("Your document is empty. Do you want to continue?")
-	 //local storage (not working)
+	 //local storage(not working) 
 	 //localStorage.setItem("New",document.getElementById("Sesh").innerHTML);
 	 //document.getElementById("result").innerHTML=localStorage.getItem("New");
 	 } 
