@@ -20,13 +20,13 @@
 <br><br><br>
 <button onclick="Save()" id="save" style="color:red;margin-left: 50%; ">Save</button>
 <script>
-	//local storage 
+	
 	function Save() {
 		if(document.getElementById("Sesh").value!=='')
 			window.alert("Your Document has been updated!");
 		else
 			window.alert("Your document is empty. Do you want to continue?")
-
+	 //local storage (not working)
 	 //localStorage.setItem("New",document.getElementById("Sesh").innerHTML);
 	 //document.getElementById("result").innerHTML=localStorage.getItem("New");
 	 } 
