@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes</title>
+</head>
+<style type="text/css">
+	#Sesh{
+		color: blue;
+		background: black;
+		text-align: left;
+		font-family: cursive;
+		font-size: 200%;
+	}
+</style>
+<body style="background-color:pink">
+<h1 style="font-family: verdana;border:outset;color: black;background-color: red;text-align: center;">Notes</h1>
+<div id="result"></div>
+<textarea  rows="10" cols="70" id="Sesh">
+	      						Type your text here...
+</textarea> 
+<br><br><br>
+<button onclick="Save()" id="save" style="color:red;margin-left: 50%; ">Save</button>
+<script>
+	//local storage 
+	function Save() {
+	 //	window.alert("Hi there!");
+	 	//localStorage.setItem("New",document.getElementById("Sesh").innerHTML);
+	 	//document.getElementById("result").innerHTML=localStorage.getItem("New");
+	 } 
+		
+</script>
+</body>
+</html> 
