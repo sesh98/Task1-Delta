@@ -14,7 +14,6 @@
 </style>
 <body style="background-color:pink">
 <h1 style="font-family: verdana;border:outset;color: black;background-color: red;text-align: center;">Notes</h1>
-<div id="result"></div>
 <textarea  rows="10" cols="70" id="Sesh">
 	      						Type your text here...
 </textarea> 
@@ -23,9 +22,13 @@
 <script>
 	//local storage 
 	function Save() {
-	 	window.alert("Your file has been updated!");
-	 	//localStorage.setItem("New",document.getElementById("Sesh").innerHTML);   not working
-	 	//document.getElementById("result").innerHTML=localStorage.getItem("New");
+		if(document.getElementById("Sesh").value!=='')
+			window.alert("Your Document has been updated!");
+		else
+			window.alert("Your document is empty. Do you want to continue?")
+
+	 //localStorage.setItem("New",document.getElementById("Sesh").innerHTML);
+	 //document.getElementById("result").innerHTML=localStorage.getItem("New");
 	 } 
 		
 </script>
