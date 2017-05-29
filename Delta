@@ -23,8 +23,8 @@
 <script>
 	//local storage 
 	function Save() {
-	 //	window.alert("Hi there!");
-	 	//localStorage.setItem("New",document.getElementById("Sesh").innerHTML);
+	 	window.alert("Your file has been updated!");
+	 	//localStorage.setItem("New",document.getElementById("Sesh").innerHTML);   not working
 	 	//document.getElementById("result").innerHTML=localStorage.getItem("New");
 	 } 
 		
