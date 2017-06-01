@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Notes</title>
+	<title>Sesh</title>
 </head>
 <style type="text/css">
-	#Sesh{
+	textarea[name="newta"]{
 		color: blue;
 		background: black;
 		text-align: left;
 		font-family: cursive;
 		font-size: 200%;
+		text-align: center;	
 	}
 	#save{
 		background-color:red;
@@ -18,25 +19,57 @@
 		font-size: 16px;
 		padding: 16px 32px;
 	}
+	button.but{
+		padding: 30px 30px;
+		text-align: center;
+		font-size: 200%;
+		margin-left :20%;
+		color:blue;
+		text-shadow: 2px 2px 2px black;
+	}
 </style>
 <body style="background-color:pink">
-<h1 style="font-family: verdana;border:outset;color: black;background-color: red;text-align: center;">Notes</h1>
-<textarea  rows="10" cols="70" id="Sesh" style="text-align: center;">Type your text here...
-</textarea> 
-<br><br><br>
+<h1 style="font-family: impact;font-size:300%;border:outset;color: black;background-color: red;text-align: center;padding: 20px 20px">Notes</h1>
+<button class="but" onclick="create()">Create a text Area</button>
+<button class="but" onclick="delet()">Delete</button>
 <button onclick="Save()" id="save" >Save</button>
-<script>
-	
+<script type="text/javascript">
+	function create() {
+		var textar=document.createElement("textarea");
+		var t=document.createTextNode("Type your text here...");
+		textar.appendChild(t);
+		textar.cols=70;
+		textar.rows=10;
+		textar.name="newta";
+		document.body.appendChild(textar);
+	}/*
+	<button class="but"onclick="change()">Change</button>
+	function change(){
+		var x=prompt("Which element do you want to change?");
+		var y=document.getElementsByName("newta");
+		if(x>y.length){
+			var x=prompt("Choose a number between 1 and "+ y.length);
+		}
+		document.getElementsByName("newta")[x-1].style.background="red";
+		//document.get....().value gives the content(whatever is written inside)
+		}*/
+	function delet(){
+		var x=prompt("Which element do you want to delete?");
+		var y=document.getElementsByName("newta");
+		if(x>y.length){
+			var x=prompt("Choose a number between 1 and "+ y.length);
+		}
+		document.getElementsByName("newta")[x-1].remove();
+	}
 	function Save() {
-		if(document.getElementById("Sesh").value!=='')
+		if(document.getElementsByName("newta")[0].value!=='')
 			window.alert("Your Document has been updated!");
 		else
-			window.alert("Your document is empty. Do you want to continue?") //try deleting everything on the text area and click save
-	 /*local storage(not working) 
-	 localStorage.setItem("New",document.getElementById("Sesh").innerHTML);
-	 document.getElementById("result").innerHTML=localStorage.getItem("New");*/
-	 } 
-		
+			window.alert("Your document is empty. Do you want to continue?")
+	 //local storage(not working) 
+	 //localStorage.setItem("New",document.getElementById("Sesh").innerHTML);
+	 //document.getElementById("result").innerHTML=localStorage.getItem("New");
+	 }
 </script>
 </body>
-</html> 
+</html>
